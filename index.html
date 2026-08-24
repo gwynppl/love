@@ -50,7 +50,7 @@
     justify-content:center;
     align-items:center;
     width:100vw;
-    min-height:100vh;
+    height:100vh;
     padding:24px;
     position:absolute;
     top:0; left:0;
@@ -59,8 +59,7 @@
       radial-gradient(circle at 84% 78%, rgba(201,162,77,0.14), transparent 45%),
       linear-gradient(165deg, var(--bg-deep) 0%, var(--bg-deep-2) 55%, var(--bg-deep-3) 100%);
     animation:fadeIn 0.8s cubic-bezier(0.23,1,0.32,1) forwards;
-    overflow-y:auto;
-    overflow-x:hidden;
+    overflow:hidden;
   }
   .page.active{display:flex;}
 
@@ -567,168 +566,38 @@
 
   /* ===== АДАПТИВ ===== */
   @media (max-width:550px){
-    .envelope, .open-envelope{ 
-      width:90vw; 
-      height:auto; 
-      aspect-ratio:520/350; 
-      max-width:380px; 
-    }
-    .envelope .flap, .open-envelope .flap-open{ 
-      height:25%; 
-    }
+    .envelope, .open-envelope{ width:380px; height:256px; }
+    .envelope .flap, .open-envelope .flap-open{ height:80px; }
     .envelope .fold-left, .envelope .fold-right,
-    .envelope .fold-left-bottom, .envelope .fold-right-bottom{ 
-      width:30%; 
-      height:48%; 
-    }
-    .envelope-ribbon{ 
-      width:5%; 
-    }
-    .wax-seal{ 
-      width:13%; 
-      height:auto; 
-      aspect-ratio:1/1; 
-      max-width:60px; 
-    }
-    .wax-seal svg{ 
-      width:38%; 
-      height:38%; 
-    }
-    .stamp{ 
-      width:9%; 
-      height:auto; 
-      aspect-ratio:50/58; 
-    }
-    .stamp svg{ 
-      width:45%; 
-      height:45%; 
-    }
-    .envelope-address{ 
-      bottom:8%; 
-      left:5%; 
-      font-size:0.35rem; 
-    }
-    .envelope-address span{ 
-      font-size:1.1rem; 
-    }
-    .code-box{ 
-      padding:24px 16px 28px; 
-      max-width:90vw; 
-    }
-    .code-input{ 
-      font-size:1.8rem; 
-      width:140px; 
-      letter-spacing:6px; 
-    }
-    .code-btn{ 
-      padding:12px 32px; 
-      font-size:0.65rem; 
-    }
-    .invite-card{ 
-      padding:24px 16px 22px; 
-      max-width:90vw; 
-    }
-    .invite-card h1{ 
-      font-size:1.7rem; 
-    }
-    .invite-card .message{ 
-      font-size:0.8rem; 
-    }
-    .invite-card .date{ 
-      font-size:1.8rem; 
-    }
-    .timer-item{ 
-      min-width:50px; 
-      padding:10px 8px; 
-    }
-    .timer-item .num{ 
-      font-size:1.5rem; 
-    }
-    .audio-wrapper audio{ 
-      width:85%; 
-      max-width:220px; 
-    }
-    .final-title{ 
-      font-size:1.8rem; 
-    }
-    .photo-inside{ 
-      width:75%; 
-      height:50%; 
-    }
-    .photo-inside img{ 
-      object-fit:contain !important; 
-    }
-    .page{ 
-      padding:16px; 
-      overflow-y:auto; 
-    }
-    .open-envelope{ 
-      margin-bottom:16px; 
-    }
-    .next-btn{ 
-      padding:12px 32px; 
-      font-size:0.6rem; 
-    }
-    .hint-text{ 
-      font-size:0.55rem; 
-      margin-top:20px; 
-    }
-    .time-select input[type="time"]{ 
-      padding:12px 20px; 
-      font-size:1.1rem; 
-      width:160px; 
-    }
-    .confirm-btn{ 
-      padding:14px 32px; 
-      font-size:0.65rem; 
-      max-width:220px; 
-    }
+    .envelope .fold-left-bottom, .envelope .fold-right-bottom{ width:117px; height:129px; }
+    .envelope-ribbon{ width:20px; }
+    .wax-seal{ width:54px; height:54px; }
+    .wax-seal svg{ width:22px; height:22px; }
+    .stamp{ width:38px; height:44px; }
+    .stamp svg{ width:18px; height:18px; }
+    .envelope-address{ bottom:16px; left:20px; font-size:0.42rem; }
+    .envelope-address span{ font-size:1.35rem; }
+    .code-box{ padding:34px 22px 36px; }
+    .code-input{ font-size:2rem; width:150px; }
+    .invite-card{ padding:34px 22px 30px; }
+    .invite-card h1{ font-size:1.9rem; }
+    .invite-card .date{ font-size:2.1rem; }
+    .timer-item{ min-width:60px; padding:14px 10px; }
+    .timer-item .num{ font-size:1.8rem; }
+    .audio-wrapper audio{ width:220px; }
+    .final-title{ font-size:2.3rem; }
   }
-
   @media (max-width:400px){
-    .envelope, .open-envelope{ 
-      width:94vw; 
-    }
-    .wax-seal{ 
-      width:11%; 
-    }
-    .stamp{ 
-      width:7%; 
-    }
-    .code-input{ 
-      font-size:1.4rem; 
-      width:110px; 
-      letter-spacing:4px; 
-    }
-    .envelope-ribbon{ 
-      width:4%; 
-    }
-    .envelope-address span{ 
-      font-size:0.9rem; 
-    }
-    .hint-text{ 
-      font-size:0.45rem; 
-    }
-    .photo-inside{ 
-      width:70%; 
-      height:45%; 
-    }
-    .invite-card h1{ 
-      font-size:1.4rem; 
-    }
-    .invite-card .date{ 
-      font-size:1.5rem; 
-    }
-    .timer-item{ 
-      min-width:40px; 
-      padding:8px 6px; 
-    }
-    .timer-item .num{ 
-      font-size:1.2rem; 
-    }
-    .final-title{ 
-      font-size:1.4rem; 
-    }
+    .envelope, .open-envelope{ width:296px; height:200px; }
+    .envelope .flap, .open-envelope .flap-open{ height:62px; }
+    .envelope .fold-left, .envelope .fold-right,
+    .envelope .fold-left-bottom, .envelope .fold-right-bottom{ width:92px; height:100px; }
+    .wax-seal{ width:42px; height:42px; }
+    .wax-seal svg{ width:18px; height:18px; }
+    .stamp{ width:30px; height:35px; }
+    .stamp svg{ width:14px; height:14px; }
+    .code-input{ font-size:1.6rem; width:120px; letter-spacing:6px; }
+    .envelope-ribbon{ width:15px; }
   }
 </style>
 </head>
@@ -749,17 +618,17 @@
 
       <div class="stamps-layer">
         <div class="stamp stamp-a" aria-hidden="true">
-          <img src="photo_2026-08-24_17-08-12.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
-        </div>
+  <img src="photo_2026-08-24_17-08-12.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
+</div>
         <div class="stamp stamp-b" aria-hidden="true">
-          <img src="photo_2026-08-24_16-56-43.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
-        </div>
-        <div class="stamp stamp-c" aria-hidden="true">
-          <img src="photo_2026-08-24_16-56-59.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
-        </div>
-        <div class="stamp stamp-d" aria-hidden="true">
-          <img src="photo_2026-08-24_16-56-53.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
-        </div>
+    <img src="photo_2026-08-24_16-56-43.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
+  </div>
+       <div class="stamp stamp-c" aria-hidden="true">
+    <img src="photo_2026-08-24_16-56-59.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
+  </div>
+      <div class="stamp stamp-d" aria-hidden="true">
+    <img src="photo_2026-08-24_16-56-53.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
+  </div>
       </div>
 
       <div class="envelope-ribbon" id="ribbon"></div>
@@ -801,14 +670,15 @@
   <div class="open-envelope">
     <div class="envelope-body">
       <div class="flap-open"></div>
-      <div class="photo-inside">
-        <img src="photo_2026-08-24_16-45-48.jpg" alt="Наше фото" />
-      </div>
+<div class="photo-inside">
+  <img src="photo_2026-08-24_16-45-48.jpg" alt="Наше фото" />
+</div>
     </div>
   </div>
 
   <div class="audio-wrapper">
     <div class="audio-hint">♫ включи</div>
+    <!-- замени src на свою композицию -->
     <audio controls id="customAudio">
       <source src="videoplayback (online-video-cutter.com).mp3" type="audio/mpeg" />
     </audio>
@@ -986,36 +856,36 @@
 
   goToInvite.addEventListener('click', function(){ showPage(page4); });
 
-  confirmTime.addEventListener('click', function(){
-    var selectedTime = timePicker.value || '19:00';
-    
-    // Отправка через Formspree
-    fetch('https://formspree.io/f/mljryrvq', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        time: selectedTime,
-        date: '25 августа 2026',
-        message: 'Душка выбрала время для свидания! ❤'
-      })
+confirmTime.addEventListener('click', function(){
+  var selectedTime = timePicker.value || '19:00';
+  
+  // Отправка через Formspree
+  fetch('https://formspree.io/f/mljryrvq', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      time: selectedTime,
+      date: '25 августа 2026',
+      message: 'Душка выбрала время для свидания! ❤'
     })
-    .then(function(response) {
-      if (response.ok) {
-        console.log('✅ Письмо отправлено!');
-      } else {
-        console.log('❌ Ошибка отправки');
-      }
-    })
-    .catch(function(error) {
-      console.log('❌ Ошибка:', error);
-    });
-
-    showPage(page5);
-    startTimer(selectedTime);
+  })
+  .then(function(response) {
+    if (response.ok) {
+      console.log('✅ Письмо отправлено!');
+    } else {
+      console.log('❌ Ошибка отправки');
+    }
+  })
+  .catch(function(error) {
+    console.log('❌ Ошибка:', error);
   });
+
+  showPage(page5);
+  startTimer(selectedTime);
+});
 
   function startTimer(selectedTime){
     var parts = selectedTime.split(':').map(Number);
