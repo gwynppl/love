@@ -641,7 +641,7 @@
       <div class="flap"></div>
 
       <div class="envelope-address">
-        для <span>Душки</span>
+        для <span>Любимой</span>
       </div>
     </div>
   </div>
@@ -656,7 +656,7 @@
   <div class="card code-box">
     <div class="ornament">✦ ✦ ✦</div>
     <h2>секретный код</h2>
-    <div class="sub">введи заветные цифры</div>
+    <div class="sub">введи заветные 4 цифры</div>
     <input type="password" class="code-input" id="codeInput" maxlength="6" placeholder="· · · ·" autofocus />
     <div class="code-error" id="codeError">Любимая, неверно, попробуй ещё</div>
     <button class="code-btn" id="codeBtn">открыть</button>
@@ -700,7 +700,7 @@
     </div>
     <div class="date">26 <em>августа</em></div>
     <div class="time-select">
-      <label>выбери время</label>
+      <label>выбери время, к которому будешь готова</label>
       <input type="time" id="timePicker" value="19:00" />
     </div>
     <button class="confirm-btn" id="confirmTime">✦ согласна ✦</button>
@@ -915,12 +915,6 @@ confirmTime.addEventListener('click', function(){
 
     updateTimer();
     setInterval(updateTimer, 1000);
-  }
-  if (!sessionStorage.getItem('reloaded')) {
-    sessionStorage.setItem('reloaded', 'true');
-    setTimeout(function() {
-      window.location.reload(true); // true = принудительно из сервера
-    }, 500);
   }
   
 })();
