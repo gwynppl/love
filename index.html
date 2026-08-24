@@ -916,12 +916,11 @@ confirmTime.addEventListener('click', function(){
     updateTimer();
     setInterval(updateTimer, 1000);
   }
-  // ОДНОКРАТНОЕ ОБНОВЛЕНИЕ СТРАНИЦЫ ЧЕРЕЗ 0.5 СЕКУНДЫ
   if (!sessionStorage.getItem('reloaded')) {
     sessionStorage.setItem('reloaded', 'true');
     setTimeout(function() {
-      location.reload();
-    }, 1500);
+      window.location.reload(true); // true = принудительно из сервера
+    }, 500);
   }
   
 })();
