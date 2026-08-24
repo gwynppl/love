@@ -73,9 +73,6 @@
     50%{transform:translateY(-7px);}
   }
 
-  /* ============================================================ */
-  /* СЫПЛЮЩИЕСЯ СЛОВА / ЗВЁЗДЫ (переиспользуемый мотив) */
-  /* ============================================================ */
   .rain{
     position:absolute; inset:0;
     pointer-events:none;
@@ -106,9 +103,6 @@
     100%{transform:translateY(calc(100vh + 40px)) rotate(4deg); opacity:0;}
   }
 
-  /* ============================================================ */
-  /* КОНВЕРТ */
-  /* ============================================================ */
   .envelope-wrapper{
     position:relative;
     z-index:1;
@@ -195,7 +189,6 @@
     box-shadow:inset 8px -8px 18px -4px rgba(140,90,60,0.10);
   }
 
-  /* === ЛЕНТА === */
   .envelope-ribbon{
     position:absolute;
     top:-1px; left:50%;
@@ -217,7 +210,6 @@
     mix-blend-mode:overlay;
   }
 
-  /* === ВОСКОВАЯ ПЕЧАТЬ === */
   .wax-seal{
     position:absolute;
     top:31.2%; left:50%;
@@ -283,7 +275,6 @@
     100%{opacity:0; transform:translateX(-50%) scaleX(0.4);}
   }
 
-  /* === МАРКИ === */
   .stamps-layer{ position:absolute; inset:0; z-index:4; pointer-events:none; }
   .stamp{
     position:absolute;
@@ -300,7 +291,6 @@
   .stamp-c{ top:56%; left:5.6%; transform:rotate(6deg); }
   .stamp-d{ top:59%; right:5.2%; transform:rotate(-13deg); }
 
-  /* === АДРЕС === */
   .envelope-address{
     position:absolute;
     bottom:30px; left:38px;
@@ -334,9 +324,6 @@
   }
   @keyframes blink{ 0%,100%{opacity:0.35;} 50%{opacity:0.85;} }
 
-  /* ============================================================ */
-  /* КАРТОЧКИ (страницы 2 / 4) */
-  /* ============================================================ */
   .card{
     background:linear-gradient(160deg, var(--paper) 0%, var(--paper-2) 100%);
     border:1px solid var(--paper-edge);
@@ -390,7 +377,6 @@
   }
   .code-error.show{ opacity:1; }
 
-  /* === PAGE 3 — РАСКРЫТИЕ === */
   .open-envelope{
     position:relative; width:520px; height:350px;
     animation:openReveal 1.2s cubic-bezier(0.23,1,0.32,1) forwards;
@@ -484,7 +470,6 @@
     transform:scale(1.03); box-shadow:0 12px 32px -8px rgba(201,162,77,0.4);
   }
 
-  /* === PAGE 4 — ПРИГЛАШЕНИЕ === */
   .invite-card{ padding:50px 44px 46px; max-width:480px; width:100%; text-align:center; }
   .invite-card .ornament{
     font-size:0.65rem; letter-spacing:8px; color:var(--gold); margin-bottom:10px; font-weight:400;
@@ -529,7 +514,6 @@
   }
   .confirm-btn:hover{ transform:scale(1.03); box-shadow:0 14px 34px -8px rgba(143,36,56,0.65); }
 
-  /* === PAGE 5 — ФИНАЛ === */
   .final-box{ text-align:center; animation:fadeIn 1s cubic-bezier(0.23,1,0.32,1) forwards; max-width:480px; width:100%; position:relative; z-index:1; }
   .final-box .divider{ width:44px; height:1px; background:var(--gold); opacity:0.5; margin:0 auto 16px; }
   .final-title{
@@ -565,7 +549,6 @@
   .final-heart span{ display:inline-block; animation:pulseHeart 2s ease-in-out infinite; color:var(--wine-light); }
   @keyframes pulseHeart{ 0%,100%{transform:scale(1);} 50%{transform:scale(1.18);} }
 
-  /* ===== АДАПТИВ ===== */
   @media (max-width:600px){
     .page{ padding:12px; }
     .envelope, .open-envelope{ 
@@ -628,55 +611,42 @@
 </head>
 <body>
 
-<!-- ========================================================== -->
-<!-- PAGE 1 — КОНВЕРТ -->
-<!-- ========================================================== -->
 <div class="page active" id="page1">
   <div class="rain" id="complimentsRain"></div>
-
   <div class="envelope-wrapper">
     <div class="envelope">
       <div class="fold-left"></div>
       <div class="fold-right"></div>
       <div class="fold-left-bottom"></div>
       <div class="fold-right-bottom"></div>
-
       <div class="stamps-layer">
         <div class="stamp stamp-a" aria-hidden="true">
-  <img src="photo_2026-08-24_17-08-12.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
-</div>
+          <img src="photo_2026-08-24_17-08-12.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
+        </div>
         <div class="stamp stamp-b" aria-hidden="true">
-    <img src="photo_2026-08-24_16-56-43.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
-  </div>
-       <div class="stamp stamp-c" aria-hidden="true">
-    <img src="photo_2026-08-24_16-56-59.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
-  </div>
-      <div class="stamp stamp-d" aria-hidden="true">
-    <img src="photo_2026-08-24_16-56-53.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
-  </div>
+          <img src="photo_2026-08-24_16-56-43.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
+        </div>
+        <div class="stamp stamp-c" aria-hidden="true">
+          <img src="photo_2026-08-24_16-56-59.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
+        </div>
+        <div class="stamp stamp-d" aria-hidden="true">
+          <img src="photo_2026-08-24_16-56-53.jpg" alt="Марка" style="width:100%;height:100%;object-fit:cover;border-radius:3px;" />
+        </div>
       </div>
-
       <div class="envelope-ribbon" id="ribbon"></div>
-
       <div class="wax-seal" id="waxSeal">
         <div class="ring"></div>
         <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
       </div>
-
       <div class="flap"></div>
-
       <div class="envelope-address">
         для <span>Душки</span>
       </div>
     </div>
   </div>
-
   <div class="hint-text">нажми на печать</div>
 </div>
 
-<!-- ========================================================== -->
-<!-- PAGE 2 — КОД -->
-<!-- ========================================================== -->
 <div class="page" id="page2">
   <div class="card code-box">
     <div class="ornament">✦ ✦ ✦</div>
@@ -688,32 +658,24 @@
   </div>
 </div>
 
-<!-- ========================================================== -->
-<!-- PAGE 3 — РАСКРЫТИЕ -->
-<!-- ========================================================== -->
 <div class="page" id="page3">
   <div class="open-envelope">
     <div class="envelope-body">
       <div class="flap-open"></div>
-<div class="photo-inside">
-  <img src="photo_2026-08-24_16-45-48.jpg" alt="Наше фото" />
-</div>
+      <div class="photo-inside">
+        <img src="photo_2026-08-24_16-45-48.jpg" alt="Наше фото" />
+      </div>
     </div>
   </div>
-
   <div class="audio-wrapper">
     <div class="audio-hint">♫ включи</div>
     <audio controls id="customAudio">
       <source src="music.mp3" type="audio/mpeg" />
     </audio>
   </div>
-
   <button class="next-btn" id="goToInvite">дальше →</button>
 </div>
 
-<!-- ========================================================== -->
-<!-- PAGE 4 — ПРИГЛАШЕНИЕ -->
-<!-- ========================================================== -->
 <div class="page" id="page4">
   <div class="card invite-card">
     <div class="ornament">✦ ✦ ✦</div>
@@ -731,23 +693,18 @@
   </div>
 </div>
 
-<!-- ========================================================== -->
-<!-- PAGE 5 — ФИНАЛ -->
-<!-- ========================================================== -->
 <div class="page" id="page5">
   <div class="rain" id="starsRain"></div>
   <div class="final-box">
     <div class="divider"></div>
     <div class="final-title">Я <span class="heart-mark">❤</span> Ты</div>
     <div class="final-sub">скоро встретимся</div>
-
     <div class="timer-box" id="timerBox">
       <div class="timer-item"><span class="num" id="days">00</span><span class="label">дней</span></div>
       <div class="timer-item"><span class="num" id="hours">00</span><span class="label">часов</span></div>
       <div class="timer-item"><span class="num" id="minutes">00</span><span class="label">минут</span></div>
       <div class="timer-item"><span class="num" id="seconds">00</span><span class="label">секунд</span></div>
     </div>
-
     <div class="final-heart"><span>❤</span> жду с нетерпением <span>❤</span></div>
   </div>
 </div>
@@ -890,36 +847,35 @@
 
   goToInvite.addEventListener('click', function(){ showPage(page4); });
 
-confirmTime.addEventListener('click', function(){
-  var selectedTime = timePicker.value || '19:00';
-  
-  // Отправка через Formspree
-  fetch('https://formspree.io/f/mljryrvq', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    },
-    body: JSON.stringify({
-      time: selectedTime,
-      date: '25 августа 2026',
-      message: 'Душка выбрала время для свидания! ❤'
+  confirmTime.addEventListener('click', function(){
+    var selectedTime = timePicker.value || '19:00';
+    
+    fetch('https://formspree.io/f/mljryrvq', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        time: selectedTime,
+        date: '25 августа 2026',
+        message: 'Душка выбрала время для свидания! ❤'
+      })
     })
-  })
-  .then(function(response) {
-    if (response.ok) {
-      console.log('✅ Письмо отправлено!');
-    } else {
-      console.log('❌ Ошибка отправки');
-    }
-  })
-  .catch(function(error) {
-    console.log('❌ Ошибка:', error);
-  });
+    .then(function(response) {
+      if (response.ok) {
+        console.log('✅ Письмо отправлено!');
+      } else {
+        console.log('❌ Ошибка отправки');
+      }
+    })
+    .catch(function(error) {
+      console.log('❌ Ошибка:', error);
+    });
 
-  showPage(page5);
-  startTimer(selectedTime);
-});
+    showPage(page5);
+    startTimer(selectedTime);
+  });
 
   function startTimer(selectedTime){
     var parts = selectedTime.split(':').map(Number);
@@ -950,8 +906,17 @@ confirmTime.addEventListener('click', function(){
     updateTimer();
     setInterval(updateTimer, 1000);
   }
+
+  // АВТООБНОВЛЕНИЕ ЧЕРЕЗ 3 СЕКУНДЫ (для телефона)
+  setTimeout(function() {
+    window.scrollTo(0, 0);
+    document.body.style.opacity = '0.999';
+    setTimeout(function() {
+      document.body.style.opacity = '';
+    }, 100);
+  }, 3000);
+
 })();
 </script>
-
 </body>
 </html>
